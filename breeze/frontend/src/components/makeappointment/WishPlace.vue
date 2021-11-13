@@ -7,14 +7,14 @@
         <img :src="require('@/assets/map/' + place.category + '.png')" alt="" class="place-img">
       </div>
       <div class="desc">
-        <div>{{place.name}}</div>
+        <div>{{ place.name | word }}</div>
         <a :href="place.url" class="arrow-box">
           <img src="@/assets/common/arrow.png" alt="" class="arrow-img">
         </a>
       </div>
     </div>
   </div>  
- </template>
+</template>
 
 <script>
 export default {
@@ -25,6 +25,15 @@ export default {
   data() {
     return {
       placeTypeColor: ["#ADA6AD", "#EBECCA", "#BFD5F8"],
+    }
+  },
+  filters: {
+    word: function (value) {
+      if (value.length > 10) {
+        return value.substr(0, 10) + ".."
+      } else {
+        return value 
+      }
     }
   }
 }

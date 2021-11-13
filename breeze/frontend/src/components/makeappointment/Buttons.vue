@@ -52,7 +52,7 @@ export default {
           rememberBtn.disabled = false
           rememberBtn.style.textDecoration = null
           }
-       }
+      }
     },
     goToWelcome() {
       this.$router.push({ name: 'Welcome' })

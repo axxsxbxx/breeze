@@ -1,7 +1,7 @@
 <template>
   <swiper-slide class="group">
     <div class="d-flex justify-content-between align-items-center">
-      <div class="group-name">{{ group.group_name }}</div>
+      <div class="group-name">{{ group.group_name | word }}</div>
       <button type="button" class="btn-close" @click="deleteGroup()"></button>
     </div>
     <div class="row group-container">
@@ -18,7 +18,7 @@
             />
           </div>
           <div class="member-name">{{ member.name }}</div>
-          <div class="member-location">{{ member.building }}</div>
+          <div class="member-location">{{ member.building | word }}</div>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
     }
   },
   methods: {
-     ...mapActions([
+    ...mapActions([
       'setParticipants',
       'setGroupName',
       'setGroupId',
@@ -100,6 +100,15 @@ export default {
   ...mapGetters([
       'groupId',
     ])
+  },
+  filters: {
+    word: function (value) {
+      if (value.length > 7) {
+        return value.substr(0, 7) + ".."
+      } else {
+        return value 
+      }
+    }
   }
 }
 </script>
