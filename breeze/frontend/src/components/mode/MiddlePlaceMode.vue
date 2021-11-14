@@ -15,12 +15,10 @@ export default {
     ...mapActions([
       'setMode1',
       'setMiddleLists',
-      'setIsMapRendered',
     ]),
     modeUpdate: function (idx) {
       console.log('111111111111111111111111111111111111111')
       // this.setMiddleLists([])
-      // this.setIsMapRendered(false)
       this.setMode1(idx)
     }
   },

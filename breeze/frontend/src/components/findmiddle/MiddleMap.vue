@@ -31,7 +31,6 @@ export default {
   methods: {
     ...mapActions([
       'setMiddleLists',
-      'setIsMapRendered',
     ]),
 
     // filterList(modeIdx) {

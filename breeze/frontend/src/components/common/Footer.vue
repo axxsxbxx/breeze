@@ -47,6 +47,8 @@ export default {
       'setFilter',
       'setMiddle',
       'setMenu',
+      'setWishPlace',
+      'setMiddleLists',
     ]),
     menuUpdate: function (idx) {
       //메뉴 업데이트
@@ -65,6 +67,8 @@ export default {
         this.setMode2(0)
         this.setFilter(0)
         this.setMiddle(0)
+        this.setWishPlace([])
+        this.setMiddleLists([])
       }     
     },
   },

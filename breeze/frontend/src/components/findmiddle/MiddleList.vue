@@ -145,7 +145,6 @@ export default {
     ...mapGetters([
       'participants',
       'middleLists',
-      'isMapRendered',
     ]) 
   },
   watch: {
@@ -164,13 +163,6 @@ export default {
     // middleLists: function () {
     //   console.log('중간장소리스트들이 바뀌면... 여길 와라?? 리스트를 판단할 수 있을까?')
       // this.middleUpdate(0)
-    // }
-    // isMapRendered: function (val) {
-    //   console.log(val)
-    //   if (val == true) {
-    //     console.log('지도 렌더링 된 후에야 중간을 바꾸자')
-    //     this.middleUpdate(0)
-    //   } 
     // }
   }
 }

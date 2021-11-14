@@ -19,7 +19,6 @@ export default {
     isFirst: false,
     isGroupSaved: false,
     isAppointmentDeleted: false,
-    isMapRendered: false,
   },
   getters: {
     date: state => state.date,
@@ -44,7 +43,6 @@ export default {
     middleName: state => state.middleName,
     middleLatitude: state => state.middleLatitude,
     middleLongitude: state => state.middleLongitude,
-    isMapRendered: state => state.isMapRendered,
   },
   mutations: {
     SETDATE (state, data) {
@@ -105,9 +103,6 @@ export default {
     SET_IS_APPOINTMENT_DELETED (state, data) {
       state.isAppointmentDeleted = data
     },
-    SETISMAPRENDERED (state, data) {
-      state.isMapRendered = data
-    },
   },
   actions: {
     setDate ({ commit }, data) {
@@ -164,8 +159,5 @@ export default {
     setIsAppointmentDeleted ({ commit }, data) {
       commit('SET_IS_APPOINTMENT_DELETED', data)
     },
-    setIsMapRendered ({ commit }, data) {
-      commit('SETISMAPRENDERED', data)
-    }
   },
 }
